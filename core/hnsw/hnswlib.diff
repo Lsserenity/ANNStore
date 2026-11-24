@@ -1,0 +1,32 @@
+diff --git a/hnswlib/hnswalg.h b/hnswlib/hnswalg.h
+index f516df5..f814750 100644
+--- a/hnswlib/hnswalg.h
++++ b/hnswlib/hnswalg.h
+@@ -9,6 +9,15 @@
+ #include <unordered_set>
+ #include <list>
+ #include <memory>
++#include <algorithm>
++#include <tuple>
++#include <limits>
++#include <cmath>
++#include <set>
++#include "global_config.hpp"
++#include "param_config.hpp"
++#include "iouring_manager.hpp"
++#include "mapped_label_offset_resolver.hpp"
+ 
+ namespace hnswlib {
+ typedef unsigned int tableint;
+@@ -170,6 +179,11 @@ class HierarchicalNSW : public AlgorithmInterface<dist_t> {
+     };
+ 
+ 
++#define ANNFS_HNSW_MEMBER_CONTEXT 1
++#include "hnsw/annfs_ext.hpp"
++#include "hnsw/overlap-support.hpp"
++#undef ANNFS_HNSW_MEMBER_CONTEXT
++
+     void setEf(size_t ef) {
+         ef_ = ef;
+     }

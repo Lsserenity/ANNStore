@@ -1,0 +1,108 @@
+# CMake and build outputs
+/build/
+/build-*/
+/build-packing/
+/cmake-build-*/
+/out/
+/execs/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+build.ninja
+.ninja_deps
+.ninja_log
+install_manifest.txt
+compile_commands.json
+Testing/
+
+# Compiled objects, libraries, and executables
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Local dependencies downloaded by Scripts/set_env.sh
+/external/json.hpp
+/external/hnswlib/hnswlib.diff
+
+# Datasets, indexes, traces, and generated storage layouts
+/DownLoadDataSets/
+/datasets/
+/data/
+/indexes/
+/hnsw_indices/
+/workspaces/
+/mnt/
+*.npy
+*.npz
+*.fvecs
+*.ivecs
+*.bvecs
+*.bin
+*.index
+
+# Experiment outputs and generated configuration
+/logs/
+/results/
+/result/
+/result_configs/
+/json_results/
+/artifacts/
+/profiles/
+mapped_io_*.json
+ds.*.json
+*.csv.tmp
+*.json.tmp
+*.log
+
+# Coverage, profiling, and crash dumps
+coverage/
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+perf.data
+perf.data.old
+core.*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Editors and language tooling
+.vscode/
+.idea/
+.clangd/
+.cache/
+.ccls-cache/
+*.swp
+*.swo
+*~
+
+# Python helpers and notebooks
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.stackdump
+
+UseConfigs/
